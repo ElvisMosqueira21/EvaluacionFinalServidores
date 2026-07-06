@@ -18,12 +18,12 @@ namespace Ejecucion
             {
                 Console.Clear();
                 Console.ForegroundColor= ConsoleColor.Cyan;
-                Console.WriteLine("\n============ RED DE SERVIDORES DEL PERU =============");
-                Console.WriteLine("1.=================== Crear grafo===================");
-                Console.WriteLine("2.================== Mostrar matriz=================");
-                Console.WriteLine("3.=============== Mostrar servidores================");
-                Console.WriteLine("4.=================== Buscar ruta===================");
-                Console.WriteLine("0.====================== Salir =====================");
+                Console.WriteLine("\n============ OPTIMIZACION DE RUTAS EN SERVIDORES=============");
+                Console.WriteLine("1.======================= Crear grafo=========================");
+                Console.WriteLine("2.====================== Mostrar matriz=======================");
+                Console.WriteLine("3.==================== Mostrar servidores=====================");
+                Console.WriteLine("4.======================= Buscar ruta=========================");
+                Console.WriteLine("0.========================= Salir ============================");
                 Console.ResetColor();
                 Console.Write("Seleccione una opcion: ");
 

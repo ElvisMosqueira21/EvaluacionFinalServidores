@@ -72,10 +72,10 @@ namespace Clases
         }
 
         
-        public Vertice GetVertice(int index)
+        public Vertice GetVertice(int indice)
         {
             Vertice temp = l_vertices.primero;
-            for (int i = 0; i < index; i++)
+            for (int i = 0; i < indice; i++)
                 temp = temp.sig;
             return temp;
         }
