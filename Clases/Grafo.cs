@@ -95,12 +95,13 @@ namespace Clases
         //Algoritmo dijkstra
         public void Dijkstra(Vertice origen, Vertice destino)
         {
+            //se dejan los vertices como no visitados y distancia infinita
             Vertice temp = l_vertices.primero;
             while (temp != null)
             {
                 temp.distancia = float.MaxValue;
                 temp.visitado = false;
-                temp.anterior = null;
+                temp.anterior = null;//sin ruta
                 temp.pesoAnterior = 0;
                 temp = temp.sig;
             }
@@ -109,6 +110,7 @@ namespace Clases
 
             while (true)
             {
+                //Busca el vertice no visitado con menor ms
                 Vertice actual = null;
                 temp = l_vertices.primero;
                 while (temp != null)
@@ -117,7 +119,7 @@ namespace Clases
                         actual = temp;
                     temp = temp.sig;
                 }
-
+                //no hay vertice valido = sin rutas para explorar
                 if (actual == null || actual.distancia == float.MaxValue)
                     break;
 
@@ -126,7 +128,7 @@ namespace Clases
                 if (actual == destino)
                     break;
 
-                Arista a = actual.ls.primero;
+                Arista a = actual.ls.primero;//ver los vecinos del vertice actual
                 while (a != null)
                 {
                     if (!a.destino.visitado)
